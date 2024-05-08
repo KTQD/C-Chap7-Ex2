@@ -2,5 +2,5 @@ Write a function that takes a string as an input parameter and uses pointers to 
 ```
 reverseString(char* str)
 ```
-Input: abcde
-output edcba
+- Input: abcde
+- output edcba
