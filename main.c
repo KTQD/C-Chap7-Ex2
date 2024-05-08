@@ -1,17 +1,28 @@
 #include <stdio.h>
+#include <string.h>
+
+void reverseString(char* str) {
+    if (str == NULL)
+        return;
+
+    int length = strlen(str);
+    char* start = str;
+    char* end = str + length - 1;
+
+    while (start < end) {
+        char temp = *start;
+        *start = *end;
+        *end = temp;
+        start++;
+        end--;
+    }
+}
 
 int main() {
-    int length, width, area;
+    char str[] = "abcde";
+    reverseString(str);
 
-    // Đọc chiều dài và chiều rộng từ người dùng
-    printf("Enter length and width: ");
-    scanf("%d %d", &length, &width);
-
-    // Tính toán diện tích
-    area = length * width;
-
-    // In ra diện tích
-    printf("The area of the rectangle is: %d\n", area);
+    printf("%s", str);
 
     return 0;
 }
